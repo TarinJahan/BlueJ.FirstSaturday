@@ -280,7 +280,7 @@ public class WriteLoops {
 
     int[] threes_array = { 3, 6, 9, 12, 15, 18, 21 };
 
-    // Foo is method that add the first 7 factors of three together and prints
+    // Foo is the method that adds the first 7 factors of three together and prints
     // out the sum of them all.
     public int foo() {
         int w = 0;
@@ -288,6 +288,8 @@ public class WriteLoops {
         int sumOfThrees = 0;
 
         // this is a so called Enhanced for loop
+        // reads as for each index in the array threes_array it is taking the value at each index and getting
+        // the sum of each index in the array
         for (int index : threes_array) {
             sumOfThrees = sumOfThrees + threes_array[index];
             // calling
@@ -340,7 +342,7 @@ public class WriteLoops {
     // inside the loop, write an IF that checks “yardNeedsMowed” and if true calls
     // “yellAtJuniorToMowLawn()”
     // After loop, call
-    // “sendJuniorBackToSchool()” with an argument that decribes the day junior goes
+    // “sendJuniorBackToSchool()” with an argument that describes the day junior goes
     // back.
     public int manageYardAndJunior() {
         int w = 0;
