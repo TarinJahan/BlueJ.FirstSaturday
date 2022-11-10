@@ -23,6 +23,7 @@ public class WriteLoops {
             // calling
             // w = w + 1;
             // each time through the loop
+
         for (int i = 1; i <= 5; i++) {
             w = w + 1;
             // Also written as w += 1
@@ -39,8 +40,8 @@ public class WriteLoops {
         // calling
         // w = w + 1;
         // each time through the loop
-        for (int i = 1; i <= 10; i++) {
 
+        for (int i = 1; i <= 10; i++) {
             w += 1;
 
         }
@@ -62,7 +63,6 @@ public class WriteLoops {
         // "w" starts at 0 and a new value will be stored in "w" each iteration (10 times) until the value is 11
 
         for(int i = 21; i >= 11; i--) {
-
             w += 1;
         }
         
@@ -78,6 +78,7 @@ public class WriteLoops {
         // each time through the loop
 
         // Use "i" to count down to in order to call "w = w + 1" in order to get the expected result 100
+
         for(int i = 100; i > 0; i--) {
             w += 1;
         }
@@ -94,7 +95,6 @@ public class WriteLoops {
         // each time through the loop
 
         for(int i = 0; i <= 32; i += 2) {
-
             w += 1;
         }
         return w;
@@ -109,7 +109,6 @@ public class WriteLoops {
         // each time through the loop
 
         for(int i = 1; i < 5001; i +=11) {
-
             w += 1;
         }
         
@@ -126,7 +125,6 @@ public class WriteLoops {
                 // each time through the inner loop
         for (int i = 0; i < 20; i++){
             for (int j = 0; j <= 4; j++) {
-
                 w += 1;
             }
         }
@@ -170,6 +168,7 @@ public class WriteLoops {
         // sample do...while loop
 
         // Do this statement while (i > 0) is TRUE
+
         i = 8;
         do {
             System.out.println("Eww.");
@@ -179,19 +178,20 @@ public class WriteLoops {
     }
 
     // Write a WHILE loop that checks “gpsCurrentLocation()”
-    // and if that is not equal to “Home” then and it calls “driveSomeMore()”.
+    // and if that is not equal to “Home” then it calls “driveSomeMore()”.
     // After the loop is done, print “Honey, I’m Home!”
     public int driveHome() {
         int w = 0;
 
         // you need to use a .equals for two Strings.
+
         while (!gpsCurrentLocation().equals("Home")) {
             w += 1;
             driveSomeMore();
         }
         System.out.println("Honey, I'm home!");
             // calling
-            //w = w + 1;
+            // w = w + 1;
             // each time through the inner loop
 
 
@@ -255,6 +255,12 @@ public class WriteLoops {
     public int checkServerStatus() {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
+        while(serverIsRunning() == true);
+            waitFor(5);
+            if (!serverIsRunning()) {
+                sendEmergencyText("Help", adminPhoneNumber);
+
+            }
         
 
         // calling
